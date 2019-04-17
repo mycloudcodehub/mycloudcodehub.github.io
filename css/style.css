@@ -76,9 +76,9 @@ body {
 
 .book:hover {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  -ms-transform: scale(1.35); 
-  -webkit-transform: scale(1.35);
-  transform: scale(1.35); 
+  -ms-transform: scale(1.10); 
+  -webkit-transform: scale(1.10);
+  transform: scale(1.10); 
 }
 a:before { /* Just to give a little puddle of a shadow without adding another element */
 	content: '';
