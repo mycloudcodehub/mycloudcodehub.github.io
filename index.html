@@ -13,7 +13,7 @@
   
   <link rel="stylesheet" href="css/style.css">
   <style>
-  .navbar-brand>img {
+ .navbar-brand>img {
   height: 150%;
 }
 .navbar-brand {
@@ -23,6 +23,51 @@
 .redius
 {-webkit-border-radius: 8px;
 border-radius: 8px; }
+
+
+.book {
+	padding: 15px 0 0 0;
+	margin: auto;
+
+}
+a:before { /* Just to give a little puddle of a shadow without adding another element */
+	content: '';
+    display: block;
+    width: 80%;
+    height: 1em;
+    background: rgba(0,0,0,.35);
+    border-radius: 50%;
+    position: absolute;
+    bottom:-10px;
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    z-index:-5;
+}
+.shelf {
+	border-bottom: 30px solid #d1d8de;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+	top: -15px;
+	z-index: -10;
+}
+/*Example adding pseudo element to give shelf depth
+ #647a8c;
+
+*/
+.shelf:after {
+	content: '';
+	background: #647a8c;;
+	height: 20px;
+	width: calc(100% + 40px); /*IE9+*/
+	position: absolute;
+	top: 30px;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	margin: 0 -20px;
+}
+
+
   </style>
 
   
@@ -30,7 +75,8 @@ border-radius: 8px; }
 
 <body>
 <div class="container">
-<div class="row" style="background-color: #51AF1B; background-clip: content-box; border: 0px; border-radius: 8px; -webkit-border-radius: 8px;">
+<div class="row" style="background-color: #51AF1B; background-clip: content-box; border: 0px; border-radius: 8px; -webkit-border-radius: 8px; padding:25px">
+
 
 <div class="col-sm-2"  >
 			<img alt="Nata Header Image" src="img/logo.png" class="img-circle pull-left img-responsive" />
@@ -56,63 +102,63 @@ border-radius: 8px; }
 <div class="row" >
 <!-- bst3  overflow: hidden; 
 
-
+books/book.html#manual-1.pdf
  style="background-color: #9A8548; background-clip: content-box;"
 up-->
 
+ <!--   ==========================-->
+<div class="container">
+    <div class="row">
+        <div class="col-xs-4 col-md-2">
+          <a href="books/book.html#manual-1.pdf"><img src="coverpage/manual-1.png" class="img-responsive book"></a>
+       	</div>
+        <div class="col-xs-4 col-md-2">
+          <a href="books/book.html#manual-1.pdf"><img src="coverpage/manual-1.png" class="img-responsive book"></a>
+       	</div>
+        <div class="col-xs-4 col-md-2">
+          <a href="books/book.html#manual-1.pdf"><img src="coverpage/manual-1.png" class="img-responsive book"></a>
+       	</div>      
+        <div class="col-xs-12 shelf hidden-md hidden-lg" class="img-responsive book"></div>
+        <div class="col-xs-4 col-md-2">
+          <a href="books/book.html#manual-1.pdf"><img src="coverpage/manual-1.png" class="img-responsive book"></a>
+       	</div>
+        <div class="col-xs-4 col-md-2">
+          <a href="books/book.html#manual-1.pdf"><img src="coverpage/manual-1.png" class="img-responsive book"></a>
+       	</div>
+        <div class="col-xs-4 col-md-2">
+          <a href="books/book.html#manual-1.pdf"><img src="coverpage/manual-1.png" class="img-responsive book"></a>
+       	</div>  
+        <div class="col-xs-12 shelf"></div>
+        <div class="col-xs-4 col-md-2">
+          <a href="books/book.html#manual-1.pdf"><img src="coverpage/manual-1.png" class="img-responsive book"></a>
+       	</div>
+        <div class="col-xs-4 col-md-2">
+          <a href="books/book.html#manual-1.pdf"><img src="coverpage/manual-1.png" class="img-responsive book"></a>
+       	</div>
+        <div class="col-xs-4 col-md-2">
+          <a href="books/book.html#manual-1.pdf"><img src="coverpage/manual-1.png" class="img-responsive book"></a>
+       	</div>  
+        <div class="col-xs-12 shelf hidden-md hidden-lg"class="img-responsive book"></div>
+        <div class="col-xs-4 col-md-2">
+          <a href="books/book.html#manual-1.pdf"><img src="coverpage/manual-1.png"class="img-responsive book"></a>
+       	</div>
+        <div class="col-xs-4 col-md-2">
+          <a href="books/book.html#manual-1.pdf"><img src="coverpage/manual-1.png"class="img-responsive book"></a>
+       	</div>
+        <div class="col-xs-4 col-md-2">
+          <a href="books/book.html#manual-1.pdf"><img src="coverpage/manual-1.png"class="img-responsive book"></a>
+       	</div>  
+        <div class="col-xs-12 shelf"></div>
+    </div>
+</div>  
+ 
  
   
  
 
 
+ <!--   ==========================-->
 
-
-
-<div class="col-sm-2"  >.</div>
-
-<div class="col-md-12" >
-
- <div class="bookshelf--frame">
-  
-  <div class="book-wrapper">
-	<a href="books/book.html#manual-1.pdf">
-		<img src="coverpage/manual-1.png">
-	</a>	
-  </div>
-  
-  <div class="book-wrapper">
-	<a href="books/book.html#manual-1.pdf">
-		<img src="coverpage/manual-1.png">
-	</a>	
-  </div>
-  
-  <div class="book-wrapper">
-	<a href="books/book.html#manual-1.pdf">
-		<img src="coverpage/manual-1.png">
-	</a>	
-  </div>
-  
-    <div class="book-wrapper">
-	<a href="books/book.html#manual-1.pdf">
-		<img src="coverpage/manual-1.png">
-	</a>	
-  </div>
-  
-  <div class="book-wrapper">
-	<a href="books/book.html#manual-1.pdf">
-		<img src="coverpage/manual-1.png">
-	</a>	
-  </div>
-  
-  <div class="book-wrapper">
-	<a href="books/book.html#manual-1.pdf">
-		<img src="coverpage/manual-1.png">
-	</a>	
-  </div>
-  
-   
- </div>
-</div>
 
 
 <!-- bst3 down-->

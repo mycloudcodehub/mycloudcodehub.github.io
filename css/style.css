@@ -1,3 +1,4 @@
+/*
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -39,7 +40,7 @@ body {
 .bookshelf--frame .book-wrapper img {
   height: auto;
   width: auto;
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 50%;
   -webkit-transform: perspective(500px) rotateY(0deg);
@@ -47,16 +48,69 @@ body {
   max-height: 100%;
   max-width: 100%;
 }
+*/
 /*
 .bookshelf--frame .book-wrapper img:hover {
   -webkit-transform: perspective(500px) rotateY(0deg);
           transform: perspective(500px) rotateY(0deg);
 }
-*/
+
 
 
 .bookshelf--frame .book-wrapper img:hover {
-  -ms-transform: scale(1.35); /* IE 9 */
-  -webkit-transform: scale(1.35); /* Safari 3-8 */
+  -ms-transform: scale(1.35); 
+  -webkit-transform: scale(1.35);
   transform: scale(1.35); 
+}
+
+*/
+body {
+  background: lightgray;
+}
+.book {
+	padding: 15px 0 0 0;
+	margin: auto;
+	height: auto;
+	width: auto;
+}
+
+.book:hover {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -ms-transform: scale(1.35); 
+  -webkit-transform: scale(1.35);
+  transform: scale(1.35); 
+}
+a:before { /* Just to give a little puddle of a shadow without adding another element */
+	content: '';
+    display: block;
+    width: 80%;
+    height: 1em;
+    background: rgba(0,0,0,.35);
+    border-radius: 50%;
+    position: absolute;
+    bottom:-10px;
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    z-index:-5;
+}
+/*  #a5a5ee; */
+.shelf {
+	border-bottom: 30px solid #d1d8de;  
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+	top: -15px;
+	z-index: -10;
+}
+/*Example adding pseudo element to give shelf depth*/
+.shelf:after {
+	content: '';
+	background: #596c7c;
+	height: 20px;
+	width: calc(100% + 40px); /*IE9+*/
+	position: absolute;
+	top: 30px;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	margin: 0 -20px;
 }
