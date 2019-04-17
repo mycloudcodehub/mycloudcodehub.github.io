@@ -1,0 +1,62 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *:after, *:before {
+  box-sizing: inherit;
+}
+
+body {
+  background: lightgray;
+}
+
+.bookshelf--frame {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bookshelf--frame {
+  background: tan;
+  background: url("img/bg-wood2.png"), linear-gradient(#323232, #373737 290px, #a8914e 290px, #a8914e 292px, #9A8548 292px, #9A8548 298px, #8c7942 298px, #8c7942 300px);
+  background-size: auto, 10px 300px;
+  border-left: 10px solid #9A8548;
+  border-right: 10px solid #9A8548;
+  text-align: center;
+}
+.bookshelf--frame:first-of-type {
+  border-top: 10px solid #9A8548;
+}
+.bookshelf--frame .book-wrapper {
+  display: inline-block;
+  width: 290px;
+  vertical-align: bottom;
+  height: 280px;
+  position: relative;
+  margin: 10px 0;
+  max-width: 100%;
+}
+.bookshelf--frame .book-wrapper img {
+  height: auto;
+  width: auto;
+  position: relative;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: perspective(500px) rotateY(0deg);
+          transform: perspective(500px) rotateY(0deg);
+  max-height: 100%;
+  max-width: 100%;
+}
+/*
+.bookshelf--frame .book-wrapper img:hover {
+  -webkit-transform: perspective(500px) rotateY(0deg);
+          transform: perspective(500px) rotateY(0deg);
+}
+*/
+
+
+.bookshelf--frame .book-wrapper img:hover {
+  -ms-transform: scale(1.35); /* IE 9 */
+  -webkit-transform: scale(1.35); /* Safari 3-8 */
+  transform: scale(1.35); 
+}
