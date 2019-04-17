@@ -39,7 +39,7 @@ body {
 .bookshelf--frame .book-wrapper img {
   height: auto;
   width: auto;
-  position: relative;
+  position: absolute;
   bottom: 0;
   left: 50%;
   -webkit-transform: perspective(500px) rotateY(0deg);
