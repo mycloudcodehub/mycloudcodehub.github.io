@@ -90,6 +90,11 @@ ul {
   list-style-type: none;
 } 
 
+.dataTables_wrapper .dataTables_filter {
+float: right;
+text-align: right;
+visibility: hidden;
+}
 
   </style>
 
@@ -97,6 +102,7 @@ ul {
 </head>
 
 <body>
+
 <div class="container" style="padding-top: 15px">
 <div class="row" style="background-color: #51AF1B; background-clip: content-box; border: 0px; border-radius: 8px; -webkit-border-radius: 8px;">
 
@@ -121,18 +127,39 @@ ul {
 
 
 
-<div class="container" style="padding:25px;">
-<div class="row" >
+
+
+
+<div class="container" >
+
+
+
+
 <!-- bst3  overflow: hidden; 
 
 books/book.html#manual-1.pdf
  style="background-color: #9A8548; background-clip: content-box;"
 up-->
 
+</div>
+</div>
+
  <!--   ==========================-->
 <div class="container">
     <div class="row">
-    	<h3>Course Guideline</h3>
+    	<div class="col-xs-12" style="padding-top: 5px;">
+    		<div class="col-xs-9" ></div>
+
+    		<div class="col-xs-3">
+
+				<div class="form-group has-feedback">
+    				<input class="form-control" placeholder="Live Serach ..." type="text" id="Search_All"><i class="glyphicon glyphicon-search form-control-feedback" style="color:green"></i>
+    			</div>
+    		</div>
+    			
+    	</div>
+    	
+		<h3 style="padding-top: 0px; margin-top: 0px  ">Course Guideline</h3>
 		<table id="tabguid" class="table table-bordered table-striped table-hover table-sm">
 		<!--Table head-->
 		  <thead>
@@ -368,6 +395,18 @@ $(document).ready( function () {
     $('#tabpub').DataTable();
     $('#tabrep').DataTable();
     $('#tabprob').DataTable();
+
+
+$("#Search_All").keyup(function () {
+    $('#tabguid').DataTable().search(this.value).draw();
+    $('#tabpub').DataTable().search(this.value).draw();
+    $('#tabrep').DataTable().search(this.value).draw();
+    $('#tabprob').DataTable().search(this.value).draw();
+});
+
+
+
+
 } );	
 
 
