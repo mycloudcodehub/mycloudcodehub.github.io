@@ -12,6 +12,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
   
   
   
@@ -129,7 +133,7 @@ up-->
 <div class="container">
     <div class="row">
     	<h3>Course Guideline</h3>
-		<table id="tablePreview1" class="table table-bordered table-striped table-hover table-sm">
+		<table id="tabguid" class="table table-bordered table-striped table-hover table-sm">
 		<!--Table head-->
 		  <thead>
 		    <tr>
@@ -188,7 +192,7 @@ up-->
 		<!--Table-->
 
     	<h3>Training Completion Report</h3>
-		<table  class="table table-bordered table-striped table-hover table-sm">
+		<table id="tabrep" class="table table-bordered table-striped table-hover table-sm">
 		<!--Table head-->
 		  <thead>
 		    <tr>
@@ -235,7 +239,7 @@ up-->
 		  </table>  
 
     	<h3>Publication</h3>
-		<table  class="table table-bordered table-striped table-hover table-sm">
+		<table id="tabpub" class="table table-bordered table-striped table-hover table-sm">
 		<!--Table head-->
 		  <thead>
 		    <tr>
@@ -328,7 +332,7 @@ up-->
 		</table>    
 
     	<h3>Problems</h3>
-		<table  class="table table-bordered table-striped table-hover table-sm">
+		<table id="tabprob" class="table table-bordered table-striped table-hover table-sm">
 		<!--Table head-->
 		  <thead>
 		    <tr>
@@ -356,7 +360,20 @@ up-->
 			
     </div>
     <hr>
-</div>  
+</div>
+
+<script type="text/javascript">
+$(document).ready( function () {
+	$('#tabguid').DataTable();
+    $('#tabpub').DataTable();
+    $('#tabrep').DataTable();
+    $('#tabprob').DataTable();
+} );	
+
+
+
+
+</script>  
  
 
  
